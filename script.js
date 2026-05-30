@@ -18,6 +18,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const isIndex = document.body.classList.contains("index-page");
     const isWonder = document.body.classList.contains("wonder-page");
 
+    const showFormToast = (message) => {
+        let toast = document.getElementById("formToast");
+        if (!toast) {
+            toast = document.createElement("div");
+            toast.id = "formToast";
+            toast.className = "form-toast";
+            toast.setAttribute("role", "status");
+            toast.setAttribute("aria-live", "polite");
+            toast.addEventListener("animationend", (e) => {
+                if (e.animationName === "form-toast-out") {
+                    toast.classList.remove("is-hiding");
+                }
+            });
+            document.body.appendChild(toast);
+        }
+
+        clearTimeout(toast._hideTimer);
+        toast.classList.remove("is-hiding");
+        toast.textContent = message;
+        void toast.offsetWidth;
+        toast.classList.add("is-visible");
+
+        toast._hideTimer = setTimeout(() => {
+            toast.classList.add("is-hiding");
+            toast.classList.remove("is-visible");
+        }, 3000);
+    };
+
     const reviewFormHtml = `
         <div class="review_form">
             <h2>Leave a review</h2>
@@ -161,8 +189,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             if (valid) {
-                alert("Thank you for your review!");
                 form.reset();
+                showFormToast("Thank you for your review!");
             }
         });
     }
