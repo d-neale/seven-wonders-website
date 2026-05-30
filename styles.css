@@ -326,24 +326,11 @@ body.index-page #slideshow-container img:not(:first-child) {
 
 .review_form input[type="date"] {
     display: block;
-    width: 100%;
-    min-height: 2.625rem;
-    padding: 0.5rem;
-    box-sizing: border-box;
     text-align: left;
-}
-
-.review_form input[type="date"]::-webkit-date-and-time-value,
-.review_form input[type="date"]::-webkit-datetime-edit {
-    text-align: left;
-    line-height: 1.25;
 }
 
 .review_form input[type="date"]::-webkit-calendar-picker-indicator {
-    margin: 0;
-    padding: 0;
-    opacity: 0.85;
-    filter: invert(1);
+    cursor: pointer;
 }
 
 .review_form textarea {
