@@ -327,6 +327,7 @@ body.index-page #slideshow-container img:not(:first-child) {
 .review_form input[type="date"] {
     display: block;
     text-align: left;
+    overflow: hidden;
 }
 
 .review_form input[type="date"]::-webkit-calendar-picker-indicator {
