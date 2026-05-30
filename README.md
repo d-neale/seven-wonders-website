@@ -8,7 +8,7 @@ Built using HTML, CSS, and JavaScript, featuring slideshows, interactive maps, a
 
 
 
-**Live site**: https://<your-username>.github.io/<your-repo-name>/
+**Live site**: https://d-neale.github.io/seven-wonders-website/
 
 
 ---

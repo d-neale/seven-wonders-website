@@ -1,19 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const WONDERS = [
-        { page: "chichén_itzá.html", name: "Chichén Itzá", coords: [-88.5678, 20.6843] },
-        { page: "christ_the_redeemer.html", name: "Christ The Redeemer", coords: [-43.2105, -22.9519] },
-        { page: "colosseum.html", name: "The Colosseum", coords: [12.4922, 41.8902] },
-        { page: "great_pyramid_of_giza.html", name: "The Great Pyramids Of Giza", coords: [31.1342, 29.9792] },
-        { page: "great_wall_of_china.html", name: "The Great Wall Of China", coords: [116.5704, 40.4319] },
-        { page: "machu_picchu.html", name: "Machu Picchu", coords: [-72.5450, -13.1631] },
-        { page: "petra.html", name: "Petra", coords: [35.4444, 30.3285] },
-        { page: "taj_mahal.html", name: "The Taj Mahal", coords: [78.0421, 27.1751] }
+        { page: "chichén_itzá.html", coords: [-88.5678, 20.6843] },
+        { page: "christ_the_redeemer.html", coords: [-43.2105, -22.9519] },
+        { page: "colosseum.html", coords: [12.4922, 41.8902] },
+        { page: "great_pyramid_of_giza.html", coords: [31.1342, 29.9792] },
+        { page: "great_wall_of_china.html", coords: [116.5704, 40.4319] },
+        { page: "machu_picchu.html", coords: [-72.5450, -13.1631] },
+        { page: "petra.html", coords: [35.4444, 30.3285] },
+        { page: "taj_mahal.html", coords: [78.0421, 27.1751] }
     ];
 
+    // Match wonder page filename from URL (works on GitHub Pages and locally).
     const pages = WONDERS.map(w => w.page);
-    const currentPage = decodeURIComponent(location.pathname.split("/").pop());
+    const pathSegment = decodeURIComponent(location.pathname.split("/").filter(Boolean).pop() || "");
+    const currentPage = pathSegment.endsWith(".html") ? pathSegment : "";
     const currentIndex = pages.indexOf(currentPage);
-    const isIndex = !currentPage || currentPage === "index.html";
+    const isIndex = document.body.classList.contains("index-page");
     const isWonder = document.body.classList.contains("wonder-page");
 
     const reviewFormHtml = `
@@ -41,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
 
     if (isWonder && currentIndex !== -1) {
+        // Injected by JS so wonder HTML stays static; form lives below the fold.
         document.querySelector(".wonder-content").insertAdjacentHTML("beforeend", reviewFormHtml);
         document.getElementById("page-footer").innerHTML = scrollHintHtml;
     }
@@ -50,13 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const navItems = document.querySelectorAll("#destination_list li");
 
     if (isIndex) {
+        // Desktop: hover preview. Touch: first tap previews, second tap follows the link.
         let tappedIndex = null;
-        let lastPointerType = "mouse";
+        const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
         const showSlide = (i) => {
             if (!slides[i]) return;
             slides.forEach((s, j) => s.style.display = j === i ? "block" : "none");
-            blurredBackground.style.backgroundImage = `url(${slides[i].src})`;
+            if (blurredBackground) {
+                blurredBackground.style.backgroundImage = `url(${slides[i].src})`;
+            }
         };
 
         const setPreviewActive = (i) => {
@@ -68,28 +74,23 @@ document.addEventListener("DOMContentLoaded", () => {
         navItems.forEach((item, i) => {
             const link = item.querySelector("a");
 
-            link.addEventListener("pointerdown", (e) => {
-                lastPointerType = e.pointerType;
-            });
-
-            item.addEventListener("pointerenter", (e) => {
-                showSlide(i);
-                if (e.pointerType === "mouse") {
-                    setPreviewActive(-1);
-                    tappedIndex = null;
-                }
-            });
-
             item.addEventListener("focusin", () => showSlide(i));
 
-            link.addEventListener("click", (e) => {
-                if (lastPointerType === "mouse") return;
-                if (tappedIndex === i) return;
-                e.preventDefault();
-                showSlide(i);
-                setPreviewActive(i);
-                tappedIndex = i;
-            });
+            if (canHover) {
+                item.addEventListener("pointerenter", () => {
+                    showSlide(i);
+                    setPreviewActive(-1);
+                    tappedIndex = null;
+                });
+            } else {
+                link.addEventListener("click", (e) => {
+                    if (tappedIndex === i) return;
+                    e.preventDefault();
+                    showSlide(i);
+                    setPreviewActive(i);
+                    tappedIndex = i;
+                });
+            }
         });
     }
 
@@ -116,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mapEl = document.getElementById("map");
     const wonder = WONDERS[currentIndex];
     if (mapEl && wonder) {
+        // MapLibre expects [longitude, latitude]
         const map = new maplibregl.Map({
             container: "map",
             style: "https://tiles.openfreemap.org/styles/liberty",
@@ -128,17 +130,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.querySelector(".review_form form");
     if (form) {
+        const nameRule = (v) =>
+            v.length < 2 ? "Name must be at least 2 characters" : /^[A-Za-z\s-]+$/.test(v) ? "" : "Letters only please";
+
         const validate = {
-            first_name: v => v.length < 2 ? "Name must be at least 2 characters" : /^[A-Za-z\s-]+$/.test(v) ? "" : "Letters only please",
-            last_name: v => v.length < 2 ? "Name must be at least 2 characters" : /^[A-Za-z\s-]+$/.test(v) ? "" : "Letters only please",
-            experience: v => v.length >= 20 ? "" : "Experience must be at least 20 characters"
+            first_name: nameRule,
+            last_name: nameRule,
+            experience: (v) => (v.length >= 20 ? "" : "Experience must be at least 20 characters")
         };
 
         form.addEventListener("submit", e => {
             e.preventDefault();
             let valid = true;
 
-            form.querySelectorAll("input, textarea, select:not([name='rating'])").forEach(field => {
+            form.querySelectorAll("input, textarea").forEach(field => {
                 field.nextElementSibling?.classList.contains("error-message") && field.nextElementSibling.remove();
 
                 const val = field.value.trim();
