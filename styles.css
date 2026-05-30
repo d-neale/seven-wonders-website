@@ -326,6 +326,10 @@ body.index-page #slideshow-container img:not(:first-child) {
 
 .review_form input[type="date"] {
     display: block;
+    width: 100%;
+    min-height: 2.625rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
     text-align: left;
 }
 
