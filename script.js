@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", () => {
             toast.className = "form-toast";
             toast.setAttribute("role", "status");
             toast.setAttribute("aria-live", "polite");
+
+            // Keep the element around so repeated submissions reuse the same toast.
+            // The CSS animation classes are toggled on this one DOM node.
             toast.addEventListener("animationend", (e) => {
+                // Only reset the hiding state after the hide animation completes.
+                // This prevents a stale "is-hiding" class from blocking later shows.
                 if (e.animationName === "form-toast-out") {
                     toast.classList.remove("is-hiding");
                 }
@@ -34,12 +39,21 @@ document.addEventListener("DOMContentLoaded", () => {
             document.body.appendChild(toast);
         }
 
+        // If a previous toast is still waiting to hide, cancel that timer so the
+        // current message displays for the full duration.
         clearTimeout(toast._hideTimer);
+
+        // Remove the hiding class before updating text so the show animation can run.
         toast.classList.remove("is-hiding");
         toast.textContent = message;
+
+        // Force a style recalculation so the browser sees the class removal and
+        // re-add as a fresh animation trigger when we add is-visible below.
         void toast.offsetWidth;
         toast.classList.add("is-visible");
 
+        // Auto-hide the toast after a short interval using the same classes that
+        // drive the CSS fade-out/slide-out animation.
         toast._hideTimer = setTimeout(() => {
             toast.classList.add("is-hiding");
             toast.classList.remove("is-visible");
