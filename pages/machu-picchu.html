@@ -3,44 +3,44 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="Explore Petra, an ancient city in southern Jordan that was the capital of the Nabataean Kingdom. Discover its famous rock-cut architecture and water conduit system.">
-    <meta name="theme-color" content="#CD853F">
-    <title>Petra - Seven Wonders Of The World</title>
-    <link rel="icon" href="../images/petra.png" type="image/png">
+    <meta name="description" content="Discover Machu Picchu, a 15th-century Inca citadel in the Andes Mountains of Peru. Explore this incredible archaeological site and its historic significance.">
+    <meta name="theme-color" content="#228B22">
+    <title>Machu Picchu - Seven Wonders Of The World</title>
+    <link rel="icon" href="../images/machu-picchu.png" type="image/png">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="preload" as="image" href="../images/petra.png">
+    <link rel="preload" as="image" href="../images/machu-picchu.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5/dist/maplibre-gl.css">
     <script defer src="https://cdn.jsdelivr.net/npm/maplibre-gl@5/dist/maplibre-gl.js"></script>
     <script defer src="../script.js"></script>
 </head>
 <body id="style_body" class="wonder-page">
     <noscript><p class="noscript-message">JavaScript is required for maps and the review form.</p></noscript>
-    <div id="blurred-background" style="background-image: url('../images/petra.png');"></div>
+    <div id="blurred-background" style="background-image: url('../images/machu-picchu.png');"></div>
     <header>
         <h1><a href="../index.html" title="Travel back to the index page">The New 7 Wonders Of The World</a></h1>
         <nav class="header-nav">
-            <a href="machu-picchu.html" class="nav-arrow" aria-label="Previous wonder">&#x25C2;</a>
+            <a href="great-wall-of-china.html" class="nav-arrow" aria-label="Previous wonder">&#x25C2;</a>
             <ul>
                 <li><a href="chichén-itzá.html" data-text="Chichén Itzá">Chichén<br class="nav-br" aria-hidden="true"> Itzá</a></li>
                 <li><a href="christ-the-redeemer.html" data-text="Christ The Redeemer">Christ The<br class="nav-br" aria-hidden="true"> Redeemer</a></li>
                 <li><a href="colosseum.html" data-text="The Colosseum">The<br class="nav-br" aria-hidden="true"> Colosseum</a></li>
                 <li><a href="great-pyramid-of-giza.html" data-text="The Great Pyramids Of Giza">Great Pyramids<br class="nav-br" aria-hidden="true"> of Giza</a></li>
                 <li><a href="great-wall-of-china.html" data-text="The Great Wall Of China">Great Wall<br class="nav-br" aria-hidden="true"> of China</a></li>
-                <li><a href="machu-picchu.html" data-text="Machu Picchu">Machu<br class="nav-br" aria-hidden="true"> Picchu</a></li>
-                <li><a href="petra.html" data-text="Petra" class="active">Petra</a></li>
+                <li><a href="machu-picchu.html" data-text="Machu Picchu" class="active">Machu<br class="nav-br" aria-hidden="true"> Picchu</a></li>
+                <li><a href="petra.html" data-text="Petra">Petra</a></li>
                 <li><a href="taj-mahal.html" data-text="The Taj Mahal">The Taj<br class="nav-br" aria-hidden="true"> Mahal</a></li>
             </ul>
-            <a href="taj-mahal.html" class="nav-arrow" aria-label="Next wonder">&#x25B8;</a>
+            <a href="petra.html" class="nav-arrow" aria-label="Next wonder">&#x25B8;</a>
         </nav>
     </header>
     <main class="wonder-content">
         <div class="left_section">
             <div id="slideshow-container">
-                <img src="../images/petra.png" alt="The Treasury facade carved into the rose-red cliffs of Petra, Jordan" loading="eager" decoding="async" fetchpriority="high">
+                <img src="../images/machu-picchu.png" alt="Machu Picchu Inca citadel in the Andes Mountains, Peru" loading="eager" decoding="async" fetchpriority="high">
             </div>
         </div>
         <div class="right_section">
-            <p>Petra is a famous archaeological site in Jordan's southwestern desert. Dating to around 300 B.C., it was the capital of the Nabatean Kingdom. Accessed via a narrow canyon called Al Siq, it contains tombs and temples carved into pink sandstone cliffs, earning its nickname, the "Rose City." Perhaps its most famous structure is 45m-high Al Khazneh, a temple with an ornate, Greek-style facade, and known as The Treasury.</p>
+            <p>Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate.</p>
             <div id="map"></div>
         </div>
     </main>

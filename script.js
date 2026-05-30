@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const WONDERS = [
-        { page: "chichén_itzá.html", coords: [-88.5678, 20.6843] },
-        { page: "christ_the_redeemer.html", coords: [-43.2105, -22.9519] },
+        { page: "chichén-itzá.html", coords: [-88.5678, 20.6843] },
+        { page: "christ-the-redeemer.html", coords: [-43.2105, -22.9519] },
         { page: "colosseum.html", coords: [12.4922, 41.8902] },
-        { page: "great_pyramid_of_giza.html", coords: [31.1342, 29.9792] },
-        { page: "great_wall_of_china.html", coords: [116.5704, 40.4319] },
-        { page: "machu_picchu.html", coords: [-72.5450, -13.1631] },
+        { page: "great-pyramid-of-giza.html", coords: [31.1342, 29.9792] },
+        { page: "great-wall-of-china.html", coords: [116.5704, 40.4319] },
+        { page: "machu-picchu.html", coords: [-72.5450, -13.1631] },
         { page: "petra.html", coords: [35.4444, 30.3285] },
-        { page: "taj_mahal.html", coords: [78.0421, 27.1751] }
+        { page: "taj-mahal.html", coords: [78.0421, 27.1751] }
     ];
 
     // Match wonder page filename from URL (works on GitHub Pages and locally).
