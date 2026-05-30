@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover the Taj Mahal, an ivory-white marble mausoleum on the southern bank of the river Yamuna in the Indian city of Agra. Learn about this masterpiece of Mughal architecture.">
+    <meta name="theme-color" content="#F5F5DC">
+    <title>The Taj Mahal - Seven Wonders Of The World</title>
+    <link rel="icon" href="../images/taj-mahal.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" as="image" href="../images/taj-mahal.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5/dist/maplibre-gl.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <script defer src="../script.js"></script>
+</head>
+<body id="style_body" class="wonder-page">
+    <noscript><p class="noscript-message">JavaScript is required for maps and the review form.</p></noscript>
+    <div id="blurred-background" style="background-image: url('../images/taj-mahal.png');"></div>
+    <header>
+        <h1><a href="../index.html" title="Travel back to the index page">The New 7 Wonders Of The World</a></h1>
+        <nav class="header-nav">
+            <a href="petra.html" class="nav-arrow" aria-label="Previous wonder" data-text="&#11164;">&#11164;</a>
+            <ul>
+                <li><a href="chichén_itzá.html" data-text="Chichén Itzá">Chichén Itzá</a></li>
+                <li><a href="christ_the_redeemer.html" data-text="Christ The Redeemer">Christ The Redeemer</a></li>
+                <li><a href="colosseum.html" data-text="The Colosseum">The Colosseum</a></li>
+                <li><a href="great_pyramid_of_giza.html" data-text="The Great Pyramids Of Giza">The Great Pyramids Of Giza</a></li>
+                <li><a href="great_wall_of_china.html" data-text="The Great Wall Of China">The Great Wall Of China</a></li>
+                <li><a href="machu_picchu.html" data-text="Machu Picchu">Machu Picchu</a></li>
+                <li><a href="petra.html" data-text="Petra">Petra</a></li>
+                <li><a href="taj_mahal.html" data-text="The Taj Mahal" class="active">The Taj Mahal</a></li>
+            </ul>
+            <a href="chichén_itzá.html" class="nav-arrow" aria-label="Next wonder" data-text="&#11166;">&#11166;</a>
+        </nav>
+    </header>
+    <main class="wonder-content">
+        <div class="left_section">
+            <div id="slideshow-container">
+                <img src="../images/taj-mahal.png" alt="The Taj Mahal marble mausoleum in Agra, India" loading="eager" decoding="async" fetchpriority="high">
+            </div>
+        </div>
+        <div class="right_section">
+            <p>The Taj Mahal is an ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor, Shah Jahan, to house the tomb of his favorite wife, Mumtaz Mahal. The tomb is the center piece of a 17-hectare (42-acre) complex, which includes a mosque and a guest house, and is set in formal gardens bounded on three sides by a crenellated wall.</p>
+            <div id="map"></div>
+        </div>
+    </main>
+    <div id="page-footer"></div>
+</body>
+</html>

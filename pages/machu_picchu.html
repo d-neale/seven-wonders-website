@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover Machu Picchu, a 15th-century Inca citadel in the Andes Mountains of Peru. Explore this incredible archaeological site and its historic significance.">
+    <meta name="theme-color" content="#228B22">
+    <title>Machu Picchu - Seven Wonders Of The World</title>
+    <link rel="icon" href="../images/machu-picchu.png" type="image/png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preload" as="image" href="../images/machu-picchu.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@5/dist/maplibre-gl.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/maplibre-gl@5/dist/maplibre-gl.js"></script>
+    <script defer src="../script.js"></script>
+</head>
+<body id="style_body" class="wonder-page">
+    <noscript><p class="noscript-message">JavaScript is required for maps and the review form.</p></noscript>
+    <div id="blurred-background" style="background-image: url('../images/machu-picchu.png');"></div>
+    <header>
+        <h1><a href="../index.html" title="Travel back to the index page">The New 7 Wonders Of The World</a></h1>
+        <nav class="header-nav">
+            <a href="great_wall_of_china.html" class="nav-arrow" aria-label="Previous wonder" data-text="&#11164;">&#11164;</a>
+            <ul>
+                <li><a href="chichén_itzá.html" data-text="Chichén Itzá">Chichén Itzá</a></li>
+                <li><a href="christ_the_redeemer.html" data-text="Christ The Redeemer">Christ The Redeemer</a></li>
+                <li><a href="colosseum.html" data-text="The Colosseum">The Colosseum</a></li>
+                <li><a href="great_pyramid_of_giza.html" data-text="The Great Pyramids Of Giza">The Great Pyramids Of Giza</a></li>
+                <li><a href="great_wall_of_china.html" data-text="The Great Wall Of China">The Great Wall Of China</a></li>
+                <li><a href="machu_picchu.html" data-text="Machu Picchu" class="active">Machu Picchu</a></li>
+                <li><a href="petra.html" data-text="Petra">Petra</a></li>
+                <li><a href="taj_mahal.html" data-text="The Taj Mahal">The Taj Mahal</a></li>
+            </ul>
+            <a href="petra.html" class="nav-arrow" aria-label="Next wonder" data-text="&#11166;">&#11166;</a>
+        </nav>
+    </header>
+    <main class="wonder-content">
+        <div class="left_section">
+            <div id="slideshow-container">
+                <img src="../images/machu-picchu.png" alt="Machu Picchu Inca citadel in the Andes Mountains, Peru" loading="eager" decoding="async" fetchpriority="high">
+            </div>
+        </div>
+        <div class="right_section">
+            <p>Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate.</p>
+            <div id="map"></div>
+        </div>
+    </main>
+    <div id="page-footer"></div>
+</body>
+</html>
