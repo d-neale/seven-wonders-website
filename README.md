@@ -16,19 +16,19 @@ Built using HTML, CSS, and JavaScript, featuring slideshows, interactive maps, a
 
 ## ✨ Features
 
-- 🖼️ Interactive image slideshow on the index page with blurred background preview
+- 🖼️ **Interactive image slideshow** on the index page with blurred background preview
   
-- 🗺️ MapLibre GL JS maps for each Wonder (using OpenFreeMap tiles)
+- 🗺️ **MapLibre GL JS maps** for each Wonder (using **OpenFreeMap** tiles)
   
-- 🧭 Previous/next navigation between Wonder pages (works with no JS) 
+- 🧭 **Previous/next navigation** between Wonder pages (works with no JS) 
 
-- ✔️ Interactive review form with built‑in client‑side validation  
+- ✔️ **Interactive review form** with built‑in client‑side validation  
 
-- 📱 Fully responsive layout for desktop, mobile, tablet, and touchscreen devices
+- 📱 **Fully responsive layout** for desktop, mobile, tablet, and touchscreen devices
   
 - 🖱️ Pointer + touchscreen support
 
-- 🧭 Works offline except for map tiles  
+- 🧭 **Works offline except for map tiles**  
 
 
 
@@ -39,17 +39,17 @@ Built using HTML, CSS, and JavaScript, featuring slideshows, interactive maps, a
 
 
 
-- HTML5  
+- **HTML5**  
 
-- CSS3  
+- **CSS3**  
 
-- JavaScript (ES6)  
+- **JavaScript (ES6)**  
 
-- MapLibre GL JS v5  
+- **MapLibre GL JS v5**  
 
-- jsDelivr CDN  
+- **jsDelivr CDN**  
 
-- OpenFreeMap  
+- **OpenFreeMap**  
 
 
 ---
@@ -63,11 +63,11 @@ Created as part of my learning journey as a Computer Science student, focusing o
 
 
 
-* DOM manipulation  
-* Event handling  
-* Responsive design principles  
-* Integrating third‑party libraries  
-* Writing clean, maintainable front‑end code  
+* **DOM manipulation**  
+* **Event handling**  
+* **Responsive design principles**  
+* **Integrating third‑party libraries**  
+* **Writing clean, maintainable front‑end code**  
 
 
 ---
@@ -77,13 +77,13 @@ Created as part of my learning journey as a Computer Science student, focusing o
 
 
 
-1\. Clone or download this repository.  
+1. Clone or download this repository.  
 
-2\. Open `index.html` in any modern browser.
+2. Open `index.html` in any modern browser.
 
 
 
-Or enable \*\*GitHub Pages\*\* in the repository settings to host it online.
+Or enable **GitHub Pages** in the repository settings to host it online.
 
 
 ---
@@ -109,13 +109,13 @@ Or enable \*\*GitHub Pages\*\* in the repository settings to host it online.
 
 
 
-This project is released under the \*\*MIT License\*\*.  
+This project is released under the **MIT License**.  
 
 You may use, modify, and distribute the code as long as the license notice is included.
 
 
 
-Note: External libraries (e.g., MapLibre, CDN assets) remain under their own respective licenses.
+**Note: External libraries (e.g., MapLibre, CDN assets) remain under their own respective licenses.**
 
 
 ---
