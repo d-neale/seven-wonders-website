@@ -16,6 +16,8 @@ Built using **HTML**, **CSS**, and **JavaScript**, featuring slideshows, interac
 
 ## ✨ Features
 
+
+
 - 🖼️ **Interactive image slideshow** on the index page with blurred background preview
   
 - 🗺️ **MapLibre GL JS maps** for each Wonder (using **OpenFreeMap** tiles)
