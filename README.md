@@ -18,19 +18,19 @@ Built using **HTML**, **CSS**, and **JavaScript**, featuring slideshows, interac
 
 
 
-- 🖼️ **Interactive image slideshow** on the index page with blurred background preview
+* 🖼️ **Interactive image slideshow** on the index page with blurred background preview
   
-- 🗺️ **MapLibre GL JS maps** for each Wonder (using **OpenFreeMap** tiles)
+* 🗺️ **MapLibre GL JS maps** for each Wonder (using **OpenFreeMap** tiles)
   
-- 🧭 **Previous/next navigation** between Wonder pages (works with no JS) 
+* 🧭 **Previous/next navigation** between Wonder pages (works with no JS) 
 
-- ✔️ **Interactive review form** with built‑in client‑side validation  
+* ✔️ **Interactive review form** with built‑in client‑side validation  
 
-- 📱 **Fully responsive layout** for desktop, mobile, tablet, and touchscreen devices
+* 📱 **Fully responsive layout** for desktop, mobile, tablet, and touchscreen devices
   
-- 🖱️ Pointer + touchscreen support
+* 🖱️ Pointer + touchscreen support
 
-- 🧭 **Works offline except for map tiles**  
+* 🧭 **Works offline except for map tiles**  
 
 
 
