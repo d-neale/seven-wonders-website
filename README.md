@@ -65,10 +65,14 @@ Created as part of my learning journey as a Computer Science student, focusing o
 
 
 
-* **DOM manipulation**  
-* **Event handling**  
-* **Responsive design principles**  
-* **Integrating third‑party libraries**  
+* **DOM manipulation**
+  
+* **Event handling**
+  
+* **Responsive design principles**
+   
+* **Integrating third‑party libraries**
+   
 * **Writing clean, maintainable front‑end code**  
 
 
