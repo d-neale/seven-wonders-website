@@ -113,6 +113,11 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         };
 
+        if (!canHover) {
+            showSlide(0);
+            setPreviewActive(0);
+        }
+
         navItems.forEach((item, i) => {
             const link = item.querySelector("a");
 

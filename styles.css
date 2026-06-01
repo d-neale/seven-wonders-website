@@ -590,9 +590,9 @@ body.index-page #slideshow-container img:not(:first-child) {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         overflow: hidden;
-        padding: 0 0.75rem 0.35rem;
+        padding: 0.25rem 0.75rem 0.35rem;
     }
 
     body.index-page .right_section h1 {
@@ -608,22 +608,25 @@ body.index-page #slideshow-container img:not(:first-child) {
         max-width: 100%;
         overflow: hidden;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     body.index-page nav ul {
         width: 100%;
         margin: 0;
         padding: 0;
-        line-height: clamp(1.6em, 3.2svh, 1.95em);
+        display: flex;
+        flex-direction: column;
+        gap: clamp(0.25rem, 1.2svh, 0.55rem);
         text-align: center;
     }
 
     body.index-page nav a {
         font-size: clamp(1rem, 2.1svh, 1.25rem);
         display: block;
-        padding: 0.12rem 0.25rem;
+        line-height: 1.15;
+        padding: 0.15rem 0.25rem;
     }
 
     body.index-page nav a.preview-active {
