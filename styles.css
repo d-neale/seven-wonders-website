@@ -597,7 +597,7 @@ body.index-page #slideshow-container img:not(:first-child) {
 
     body.index-page .right_section h1 {
         font-size: clamp(1.3rem, 2.8svh, 1.65rem);
-        margin: 0 0 0.25rem;
+        margin: 0.25rem 0 0.1rem;
         flex-shrink: 0;
     }
 
@@ -616,12 +616,14 @@ body.index-page #slideshow-container img:not(:first-child) {
         width: 100%;
         margin: 0;
         padding: 0;
-        line-height: clamp(1.55em, 3.1svh, 1.9em);
+        line-height: clamp(1.6em, 3.2svh, 1.95em);
         text-align: center;
     }
 
     body.index-page nav a {
         font-size: clamp(1rem, 2.1svh, 1.25rem);
+        display: block;
+        padding: 0.12rem 0.25rem;
     }
 
     body.index-page nav a.preview-active {

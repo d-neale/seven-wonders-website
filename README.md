@@ -11,6 +11,11 @@ Built using **HTML**, **CSS**, and **JavaScript**, featuring slideshows, interac
 **Live site**: https://d-neale.github.io/seven-wonders-website/
 
 
+
+(I am aware there are 8 wonders in my website I decided to include **The Great Pyramid of Giza** which is the only remaining ancient wonder of the world)
+
+
+
 ---
 
 
@@ -20,17 +25,25 @@ Built using **HTML**, **CSS**, and **JavaScript**, featuring slideshows, interac
 
 * 🖼️ **Interactive image slideshow** on the index page with blurred background preview
   
+* 👆 **Touch-friendly destination preview** (tap once to preview, tap again to follow link)
+  
 * 🗺️ **MapLibre GL JS maps** for each Wonder (using **OpenFreeMap** tiles)
   
 * 🧭 **Previous/next navigation** between Wonder pages (works with no JS) 
 
 * ✔️ **Interactive review form** with built‑in client‑side validation  
 
+* ✅ **Submission success toast** after leaving a review
+  
+* ⬇️ **Scroll hint** + tap-to-scroll to the review section
+  
 * 📱 **Fully responsive layout** for desktop, mobile, tablet, and touchscreen devices
   
 * 🖱️ Pointer + touchscreen support
 
 * 🧭 **Works offline except for map tiles**  
+
+* ♿ **Reduced motion support** for users who prefer fewer animations
 
 
 
