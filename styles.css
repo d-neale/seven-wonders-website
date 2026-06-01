@@ -598,6 +598,7 @@ body.index-page #slideshow-container img:not(:first-child) {
     body.index-page .right_section h1 {
         font-size: clamp(1.3rem, 2.8svh, 1.65rem);
         margin: 0.1rem 0 0.45rem;
+        transform: translateY(-0.35rem);
         flex-shrink: 0;
     }
 
