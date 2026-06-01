@@ -602,7 +602,7 @@ body.index-page #slideshow-container img:not(:first-child) {
     }
 
     body.index-page nav {
-        flex: 1 1 0;
+        flex: 0 0 auto;
         min-height: 0;
         width: 100%;
         max-width: 100%;
@@ -618,7 +618,7 @@ body.index-page #slideshow-container img:not(:first-child) {
         padding: 0;
         display: flex;
         flex-direction: column;
-        gap: clamp(0.25rem, 1.2svh, 0.55rem);
+        gap: clamp(0.35rem, 1.4svh, 0.7rem);
         text-align: center;
     }
 
@@ -795,7 +795,7 @@ body.index-page #slideshow-container img:not(:first-child) {
 
 /* --- Touch devices: no sticky hover styles on index links --- */
 @media (hover: none), (pointer: coarse) {
-    body.index-page #destination_list li:hover a {
+    body.index-page #destination_list li:hover a:not(.preview-active) {
         color: white;
         font-weight: normal;
     }
